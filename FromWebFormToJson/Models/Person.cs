@@ -10,7 +10,7 @@ namespace FromWebFormToJson.Models
         public string? FirstName { get; set; }
         [Required]
         public string? MiddleName { get; set; }
-        []
+        
         public DateOnly? BirthDate { get; set; }
     }
 }
