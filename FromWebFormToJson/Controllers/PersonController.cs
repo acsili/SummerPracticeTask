@@ -12,6 +12,7 @@ namespace FromWebFormToJson.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult AddPerson(Person person)
         {
