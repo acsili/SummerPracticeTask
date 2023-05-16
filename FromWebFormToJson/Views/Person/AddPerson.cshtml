@@ -11,21 +11,25 @@
 		<div class="mb-3">
 			<label asp-for="LastName" class="form-label">Last name</label>
 			<input asp-for="LastName" type="text" class="form-control">
+            <span class="text-danger" asp-validation-for="LastName" />
 		</div>
         
         <div class="mb-3">
             <label asp-for="FirstName" class="form-label">First name</label>
             <input asp-for="FirstName" type="text" class="form-control">
+            <span class="text-danger" asp-validation-for="FirstName" />
         </div>
 
         <div class="mb-3">
             <label asp-for="MiddleName" class="form-label">Middle name</label>
             <input asp-for="MiddleName" type="text" class="form-control">
+            <span class="text-danger" asp-validation-for="MiddleName" />
         </div>
 
         <div class="mb-3">
             <label asp-for="BirthDate" class="form-label">Birth date</label>
             <input asp-for="BirthDate" type="text" class="form-control">
+            <span class="text-danger" asp-validation-for="BirthDate" />
         </div>
 
         @if (TempData["msg"] != null)
