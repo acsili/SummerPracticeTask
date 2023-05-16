@@ -1,23 +1,17 @@
 ﻿using FromWebFormToJson.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using System.Reflection;
 using System.Text.Json;
 
 namespace FromWebFormToJson.Controllers
 {
     public class PersonController : Controller
     {
-        public IActionResult AddPerson()
-        {
-            return View();
-        }
-
+        public IActionResult AddPerson() => View();
+        
         [HttpPost]
         public IActionResult AddPerson(Person person)
         {
-
-            if (person.MiddleName == null || person.FirstName == null || person.LastName == null || person.BirthDate == null)
+            if (!ModelState.IsValid)
             {
                 TempData["msg"] = "Fill in all the fields";
                 return View();
